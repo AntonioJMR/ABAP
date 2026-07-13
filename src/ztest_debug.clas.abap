@@ -1,5 +1,4 @@
-CLASS ztest DEFINITION
-
+CLASS ztest_debug DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,12 +11,18 @@ CLASS ztest DEFINITION
 ENDCLASS.
 
 
-CLASS ztest IMPLEMENTATION.
+CLASS ztest_debug IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
 
-    out->write(  ' HOLA WORLD!!' ).
+    "hazme un bucle sencillo del 1 al 10
+    DATA(i) = 1.
+
+    WHILE i <= 10.
+      out->write( i ).
+      i = i + 1.
+    ENDWHILE.
 
   ENDMETHOD.
 ENDCLASS.
