@@ -45,38 +45,62 @@
 
 //// EJER 3
 
-define view entity zcds_vuelos_basico_02
-  with parameters
-    p_fecha : abap.dats
+//define view entity zcds_vuelos_basico_02
+//  with parameters
+//    p_fecha : abap.dats
+//
+//  as select from /dmo/booking as b
+//
+//  association [1..1] to /dmo/customer as _Customer
+//    on b.customer_id = _Customer.customer_id
+//
+//{
+//  key b.customer_id                                          as cliente_id,
+//
+//      count(*)                                                as num_reservas,
+//
+//      @Semantics.amount.currencyCode: 'moneda'
+//      cast( sum( b.flight_price ) as abap.curr( 16,2 ) )      as importe_total_reservado,
+//
+//      case
+//        when sum( b.flight_price ) < 1000                     then 'Ocasional'
+//        when sum( b.flight_price ) between 1000 and 5000      then 'Frecuente'
+//        else 'VIP'
+//      end                                                      as tipo_cliente,
+//
+//      b.currency_code                                         as moneda,
+//
+//      _Customer
+//
+//}
+//
+//where
+//  b.booking_date > $parameters.p_fecha
+//
+//group by
+//  b.customer_id,
+//  b.currency_code
 
-  as select from /dmo/booking as b
 
-  association [1..1] to /dmo/customer as _Customer
-    on b.customer_id = _Customer.customer_id
-
+define view entity zcds_vuelos_basico_02  with parameters p_nombre : abap.char(40)
+  as select from /dmo/booking  as b
+    inner join   /dmo/customer as c on b.customer_id = c.customer_id
+    
 {
-  key b.customer_id                                          as cliente_id,
-
-      count(*)                                                as num_reservas,
-
-      @Semantics.amount.currencyCode: 'moneda'
-      cast( sum( b.flight_price ) as abap.curr( 16,2 ) )      as importe_total_reservado,
-
-      case
-        when sum( b.flight_price ) < 1000                     then 'Ocasional'
-        when sum( b.flight_price ) between 1000 and 5000      then 'Frecuente'
-        else 'VIP'
-      end                                                      as tipo_cliente,
-
-      b.currency_code                                         as moneda,
-
-      _Customer
-
-}
-
-where
-  b.booking_date > $parameters.p_fecha
-
-group by
-  b.customer_id,
+  c.first_name          as Nombre,
+  count(*)             as Num_Reservas,
+  @Semantics.amount.currencyCode: 'Moneda'
+  sum( b.flight_price ) as ImporteTotal,
+  b.currency_code       as Moneda,
+  
+  case
+    when sum( b.flight_price ) < 1000 then 'Ocasional'  
+    when sum( b.flight_price ) < 5000 then 'Frecuente'  
+    else 'VIP'  
+  end as Tipo_Cliente
+} where c.first_name = $parameters.p_nombre 
+    group by
+  c.first_name,
   b.currency_code
+
+

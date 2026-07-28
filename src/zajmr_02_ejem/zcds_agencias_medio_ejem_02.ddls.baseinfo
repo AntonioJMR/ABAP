@@ -3,8 +3,9 @@
 {
 "FROM":
 [
+"/DMO/AGENCY",
 "/DMO/BOOKING",
-"/DMO/CUSTOMER"
+"/DMO/TRAVEL"
 ],
 "ASSOCIATED":
 [],

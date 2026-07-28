@@ -3,7 +3,7 @@
 {
 "FROM":
 [
-"/DMO/BOOKING",
+"I_COUNTRYTEXT",
 "/DMO/CUSTOMER"
 ],
 "ASSOCIATED":
