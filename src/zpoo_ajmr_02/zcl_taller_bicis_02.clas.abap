@@ -51,8 +51,11 @@ CLASS zcl_taller_bicis_02 IMPLEMENTATION.
       FROM zdb_tallebici_02
       INTO @data(lv_idMaxBBDD).
 
-     rv_id = CONV zdb_tallebici_02-id_reparacion( lv_idMaxBBDD + 1 ).
-
+    IF sy-subrc = 0.
+        rv_id = CONV zdb_tallebici_02-id_reparacion( lv_idMaxBBDD + 1 ).
+    ELSE.
+        rv_id = 1.
+    ENDIF.
 
 
     INSERT zdb_tallebici_02
