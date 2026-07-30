@@ -129,5 +129,12 @@ CLASS zcl_test_colombinas_02 IMPLEMENTATION.
     ENDDO.
 
     mo_out->write( |Concierto tras 500 visitantes - Precio: { lo_concierto->calcular_precio_entrada( ) } EUR| ).
+
+    mo_out->write( |--------------------------Comprobar si ha modificado los valores de la tabla por valor o referencia ------------------------------| ).
+    LOOP AT lt_atracciones INTO DATA(lo_ref2).
+      lo_ref2->recibir_visitante( ).
+      DATA(lv_precio2) = lo_ref2->calcular_precio_entrada( ).
+      mo_out->write( |Visitantes: { lo_ref2->consultar_visitantes( ) } - Precio: { lv_precio2 } EUR| ).
+    ENDLOOP.
   ENDMETHOD.
 ENDCLASS.
