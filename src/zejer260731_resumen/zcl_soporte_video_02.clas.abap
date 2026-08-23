@@ -32,11 +32,14 @@ CLASS zcl_soporte_video_02 DEFINITION PUBLIC ABSTRACT CREATE PUBLIC.
 ENDCLASS.
 
 
-CLASS zcl_soporte_video_02 IMPLEMENTATION.
+
+CLASS ZCL_SOPORTE_VIDEO_02 IMPLEMENTATION.
+
 
   METHOD consultar_total_soportes.
     resultado = total_soportes_creados.
   ENDMETHOD.
+
 
   METHOD constructor.
     titulo           = iv_titulo.
@@ -45,16 +48,18 @@ CLASS zcl_soporte_video_02 IMPLEMENTATION.
     total_soportes_creados = total_soportes_creados + 1.
   ENDMETHOD.
 
+
   METHOD calcular_precio_final.
     resultado = precio_alquiler.
   ENDMETHOD.
+
 
   METHOD registrar_alquiler.
     veces_alquilado = veces_alquilado + 1.
   ENDMETHOD.
 
+
   METHOD consultar_veces_alquilado.
     resultado = veces_alquilado.
   ENDMETHOD.
-
 ENDCLASS.

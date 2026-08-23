@@ -38,15 +38,19 @@ CLASS zcl_prestamo_biblioteca_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_prestamo_biblioteca_02 IMPLEMENTATION.
+
+CLASS ZCL_PRESTAMO_BIBLIOTECA_02 IMPLEMENTATION.
+
 
   METHOD consultar_total_prestamos.
     rv_total = total_prestamos_realizados.
   ENDMETHOD.
 
+
   METHOD consultar_pendientes.
     rv_pendientes = prestamos_pendientes.
   ENDMETHOD.
+
 
   METHOD constructor.
     mv_socio    = iv_socio.
@@ -58,6 +62,7 @@ CLASS zcl_prestamo_biblioteca_02 IMPLEMENTATION.
     prestamos_pendientes       = prestamos_pendientes + 1.
   ENDMETHOD.
 
+
   METHOD marcar_devuelto.
     " Solo restamos si antes NO estaba ya devuelto (evita restar dos veces)
     IF mv_devuelto = abap_false.
@@ -66,10 +71,10 @@ CLASS zcl_prestamo_biblioteca_02 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD consultar_datos.
     ev_socio    = mv_socio.
     ev_libro    = mv_libro.
     ev_devuelto = mv_devuelto.
   ENDMETHOD.
-
 ENDCLASS.

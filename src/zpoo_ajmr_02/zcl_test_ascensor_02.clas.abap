@@ -3,7 +3,10 @@ CLASS zcl_test_ascensor_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
     INTERFACES if_oo_adt_classrun.
 ENDCLASS.
 
-CLASS zcl_test_ascensor_02 IMPLEMENTATION.
+
+
+CLASS ZCL_TEST_ASCENSOR_02 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -58,5 +61,4 @@ CLASS zcl_test_ascensor_02 IMPLEMENTATION.
     out->write( |Paso 6 (subir a planta 15, fuera de rango): Se movio = { lv_subida_3 } - Planta actual = { lv_planta_actual }| ).
 
   ENDMETHOD.
-
 ENDCLASS.

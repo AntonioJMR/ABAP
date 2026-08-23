@@ -14,7 +14,9 @@ CLASS zcl_chiringuito_bebidas_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_chiringuito_bebidas_02 IMPLEMENTATION.
+
+CLASS ZCL_CHIRINGUITO_BEBIDAS_02 IMPLEMENTATION.
+
 
   METHOD vender.
     IF iv_importe < '1.50'.
@@ -25,8 +27,8 @@ CLASS zcl_chiringuito_bebidas_02 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD anadir_hielo.
     rv_mensaje = |Se ha añadido hielo extra al pedido.|.
   ENDMETHOD.
-
 ENDCLASS.

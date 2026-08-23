@@ -12,7 +12,10 @@ CREATE PUBLIC.
 
 ENDCLASS.
 
-CLASS zcl_caseta_02 IMPLEMENTATION.
+
+
+CLASS ZCL_CASETA_02 IMPLEMENTATION.
+
 
   METHOD constructor.
 
@@ -25,7 +28,4 @@ CLASS zcl_caseta_02 IMPLEMENTATION.
     " sin lógica obligatoria
         rv_texto = | dame un pedir rebujito |.
   ENDMETHOD.
-
-
-
 ENDCLASS.

@@ -21,19 +21,22 @@ CLASS zcl_instrumento_02 DEFINITION PUBLIC ABSTRACT CREATE PUBLIC.
 ENDCLASS.
 
 
-CLASS zcl_instrumento_02 IMPLEMENTATION.
+
+CLASS ZCL_INSTRUMENTO_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     mv_marca     = iv_marca.
     mv_horas_uso = 0.
   ENDMETHOD.
 
+
   METHOD registrar_practica.
     mv_horas_uso = mv_horas_uso + iv_horas_practicadas.
   ENDMETHOD.
 
+
   METHOD consultar_horas_uso.
     resultado = mv_horas_uso.
   ENDMETHOD.
-
 ENDCLASS.

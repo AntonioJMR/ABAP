@@ -3,7 +3,10 @@ CLASS zcl_test_caja_fuerte_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
     INTERFACES if_oo_adt_classrun.
 ENDCLASS.
 
-CLASS zcl_test_caja_fuerte_02 IMPLEMENTATION.
+
+
+CLASS ZCL_TEST_CAJA_FUERTE_02 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -42,5 +45,4 @@ CLASS zcl_test_caja_fuerte_02 IMPLEMENTATION.
 
 
   ENDMETHOD.
-
 ENDCLASS.

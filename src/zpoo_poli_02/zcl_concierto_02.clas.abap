@@ -10,10 +10,15 @@ CREATE PUBLIC.
     METHODS calcular_precio_entrada REDEFINITION.
 ENDCLASS.
 
-CLASS zcl_concierto_02 IMPLEMENTATION.
+
+
+CLASS ZCL_CONCIERTO_02 IMPLEMENTATION.
+
+
   METHOD constructor.
     super->constructor( iv_nombre = iv_nombre ).
   ENDMETHOD.
+
 
   METHOD calcular_precio_entrada.
     IF consultar_visitantes( ) < 500.
@@ -23,5 +28,3 @@ CLASS zcl_concierto_02 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 ENDCLASS.
-
-

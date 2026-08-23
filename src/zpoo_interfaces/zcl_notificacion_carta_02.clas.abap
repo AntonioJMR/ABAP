@@ -16,18 +16,21 @@ CLASS zcl_notificacion_carta_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_notificacion_carta_02 IMPLEMENTATION.
+
+CLASS ZCL_NOTIFICACION_CARTA_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     mv_direccion = iv_direccion.
   ENDMETHOD.
 
+
   METHOD zif_notificable_02~notificar.
     mo_out->write( |Carta a { mv_direccion }: { iv_mensaje }| ).
   ENDMETHOD.
 
+
   METHOD zif_notificable_02~consultar_coste_envio.
     rv_coste = '1.20'.
   ENDMETHOD.
-
 ENDCLASS.

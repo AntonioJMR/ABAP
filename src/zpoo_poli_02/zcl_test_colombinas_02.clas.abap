@@ -100,7 +100,10 @@ CLASS zcl_test_colombinas_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
 ENDCLASS.
 
 
-CLASS zcl_test_colombinas_02 IMPLEMENTATION.
+
+CLASS ZCL_TEST_COLOMBINAS_02 IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     mo_out = out.
 

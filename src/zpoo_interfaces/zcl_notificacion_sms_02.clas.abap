@@ -18,18 +18,21 @@ CLASS zcl_notificacion_sms_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_notificacion_sms_02 IMPLEMENTATION.
+
+CLASS ZCL_NOTIFICACION_SMS_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     mv_telefono = iv_telefono.
   ENDMETHOD.
 
+
   METHOD zif_notificable_02~notificar.
     mo_out->write( |SMS al { mv_telefono }: { iv_mensaje }| ).
   ENDMETHOD.
 
+
   METHOD zif_notificable_02~consultar_coste_envio.
     rv_coste = '0.10'.
   ENDMETHOD.
-
 ENDCLASS.

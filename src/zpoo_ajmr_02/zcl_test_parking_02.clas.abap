@@ -3,7 +3,10 @@ CLASS zcl_test_parking_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
     INTERFACES if_oo_adt_classrun.
 ENDCLASS.
 
-CLASS zcl_test_parking_02 IMPLEMENTATION.
+
+
+CLASS ZCL_TEST_PARKING_02 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -21,5 +24,4 @@ CLASS zcl_test_parking_02 IMPLEMENTATION.
     out->write( |3 horas -> Precio: { lv_precio_1 } - Minutos: { lv_minutos_1 }| ).
 
   ENDMETHOD.
-
 ENDCLASS.

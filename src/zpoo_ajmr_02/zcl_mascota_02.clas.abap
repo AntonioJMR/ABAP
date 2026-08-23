@@ -50,12 +50,15 @@ CLASS zcl_mascota_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
 ENDCLASS.
 
 
-CLASS zcl_mascota_02 IMPLEMENTATION.
+
+CLASS ZCL_MASCOTA_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     mv_hambre  = 100.
     mv_energia = 100.
   ENDMETHOD.
+
 
   METHOD comer.
     mv_hambre = mv_hambre + 20.
@@ -63,6 +66,7 @@ CLASS zcl_mascota_02 IMPLEMENTATION.
       mv_hambre = 100.
     ENDIF.
   ENDMETHOD.
+
 
   METHOD jugar.
 
@@ -82,9 +86,9 @@ CLASS zcl_mascota_02 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD consultar_estado.
     ev_hambre  = mv_hambre.
     ev_energia = mv_energia.
   ENDMETHOD.
-
 ENDCLASS.

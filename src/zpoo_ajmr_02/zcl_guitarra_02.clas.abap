@@ -25,12 +25,15 @@ CREATE PUBLIC
 ENDCLASS.
 
 
-CLASS zcl_guitarra_02 IMPLEMENTATION.
+
+CLASS ZCL_GUITARRA_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     super->constructor( iv_marca = iv_marca ).
     mv_numero_cuerdas = iv_numero_cuerdas.
   ENDMETHOD.
+
 
   METHOD afinar_cuerda.
 
@@ -41,5 +44,4 @@ CLASS zcl_guitarra_02 IMPLEMENTATION.
     ENDIF.
 
   ENDMETHOD.
-
 ENDCLASS.

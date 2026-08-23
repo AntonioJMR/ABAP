@@ -68,11 +68,12 @@ CLASS zcl_dron_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
               mv_carga_maxima TYPE i,
               mv_carga_actual TYPE i,
               mv_modo_reserva TYPE abap_bool.
-  ENDCLASS.
+ENDCLASS.
 
 
 
-CLASS zcl_dron_02 IMPLEMENTATION.
+CLASS ZCL_DRON_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     mv_carga_maxima = iv_carga_maxima.
@@ -80,6 +81,7 @@ CLASS zcl_dron_02 IMPLEMENTATION.
     mv_carga_actual = 0.
     mv_modo_reserva = abap_false.
   ENDMETHOD.
+
 
   METHOD recoger_paquete.
     rv_aceptado = abap_false.
@@ -102,6 +104,7 @@ CLASS zcl_dron_02 IMPLEMENTATION.
     mv_carga_actual = mv_carga_actual + iv_peso.
     rv_aceptado = abap_true.
   ENDMETHOD.
+
 
   METHOD volar_a_cliente.
     DATA: lv_consumo TYPE i.
@@ -140,17 +143,16 @@ CLASS zcl_dron_02 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD recargar.
     mv_bateria      = 100.
     mv_modo_reserva = abap_false.
   ENDMETHOD.
+
 
   METHOD consultar_estado.
     ev_bateria      = mv_bateria.
     ev_carga_actual = mv_carga_actual.
     ev_modo_reserva = mv_modo_reserva.
   ENDMETHOD.
-
 ENDCLASS.
-
-

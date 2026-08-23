@@ -18,12 +18,15 @@ CLASS zcl_piano_02 DEFINITION PUBLIC FINAL CREATE PUBLIC
 ENDCLASS.
 
 
-CLASS zcl_piano_02 IMPLEMENTATION.
+
+CLASS ZCL_PIANO_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     super->constructor( iv_marca = iv_marca ).
     mv_es_electrico = iv_es_electrico.
   ENDMETHOD.
+
 
   METHOD pedalear.
 
@@ -34,5 +37,4 @@ CLASS zcl_piano_02 IMPLEMENTATION.
     ENDIF.
 
   ENDMETHOD.
-
 ENDCLASS.

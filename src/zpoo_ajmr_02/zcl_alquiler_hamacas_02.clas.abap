@@ -16,14 +16,16 @@ CLASS zcl_alquiler_hamacas_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_alquiler_hamacas_02 IMPLEMENTATION.
+
+CLASS ZCL_ALQUILER_HAMACAS_02 IMPLEMENTATION.
+
 
   METHOD calcular_comision_ayuntamiento.
     rv_comision = super->calcular_comision_ayuntamiento( ) * 2.
   ENDMETHOD.
 
+
   METHOD reservar_sombrilla.
     rv_mensaje =  |Sombrilla número { iv_numero_sombrilla } reservada.|.
   ENDMETHOD.
-
 ENDCLASS.

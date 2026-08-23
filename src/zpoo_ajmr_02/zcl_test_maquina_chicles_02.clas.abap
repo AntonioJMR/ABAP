@@ -3,7 +3,10 @@ CLASS zcl_test_maquina_chicles_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
     INTERFACES if_oo_adt_classrun.
 ENDCLASS.
 
-CLASS zcl_test_maquina_chicles_02 IMPLEMENTATION.
+
+
+CLASS ZCL_TEST_MAQUINA_CHICLES_02 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -22,5 +25,4 @@ CLASS zcl_test_maquina_chicles_02 IMPLEMENTATION.
     out->write( |Moneda 10 (insuficiente): Cambio: { lv_cambio_4 } centimos - Stock maquinas de chicles:  { lo_maquina->consultar_stock( ) }| ).
 
   ENDMETHOD.
-
 ENDCLASS.

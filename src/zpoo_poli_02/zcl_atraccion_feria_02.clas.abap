@@ -14,11 +14,16 @@ CREATE PUBLIC.
     DATA: mv_precio TYPE p DECIMALS 2.
 ENDCLASS.
 
-CLASS zcl_atraccion_feria_02 IMPLEMENTATION.
+
+
+CLASS ZCL_ATRACCION_FERIA_02 IMPLEMENTATION.
+
+
   METHOD constructor.
     super->constructor( iv_nombre = iv_nombre ).
     mv_precio = iv_precio.
   ENDMETHOD.
+
 
   METHOD calcular_precio_entrada.
     rv_precio = mv_precio.

@@ -99,7 +99,9 @@ CLASS zcl_test_taller_bicis_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_test_taller_bicis_02 IMPLEMENTATION.
+
+CLASS ZCL_TEST_TALLER_BICIS_02 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -177,5 +179,4 @@ CLASS zcl_test_taller_bicis_02 IMPLEMENTATION.
 *    ENDIF.
 
   ENDMETHOD.
-
 ENDCLASS.

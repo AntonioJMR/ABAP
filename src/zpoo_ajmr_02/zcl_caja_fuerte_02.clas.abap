@@ -27,13 +27,16 @@ CLASS zcl_caja_fuerte_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
 ENDCLASS.
 
 
-CLASS zcl_caja_fuerte_02 IMPLEMENTATION.
+
+CLASS ZCL_CAJA_FUERTE_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     mv_codigo            = iv_codigo.
     mv_intentos_fallidos = 0.
     mv_bloqueada         = abap_false.
   ENDMETHOD.
+
 
   METHOD abrir.
 
@@ -55,6 +58,7 @@ CLASS zcl_caja_fuerte_02 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD esta_bloqueada.
     rv_estado_caja = mv_bloqueada.
     if rv_estado_caja = abap_true.
@@ -63,5 +67,4 @@ CLASS zcl_caja_fuerte_02 IMPLEMENTATION.
       rv_estado_caja = abap_false.
     endif.
   ENDMETHOD.
-
 ENDCLASS.

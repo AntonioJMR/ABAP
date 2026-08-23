@@ -41,7 +41,9 @@ CLASS zcl_taller_bicis_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_taller_bicis_02 IMPLEMENTATION.
+
+CLASS ZCL_TALLER_BICIS_02 IMPLEMENTATION.
+
 
   METHOD registrar_reparacion.
 
@@ -112,5 +114,4 @@ CLASS zcl_taller_bicis_02 IMPLEMENTATION.
     ENDIF.
 
   ENDMETHOD.
-
 ENDCLASS.

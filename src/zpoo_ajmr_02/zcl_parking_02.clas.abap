@@ -13,7 +13,9 @@ CLASS zcl_parking_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
 ENDCLASS.
 
 
-CLASS zcl_parking_02 IMPLEMENTATION.
+
+CLASS ZCL_PARKING_02 IMPLEMENTATION.
+
 
   METHOD calcular_tarifa.
 
@@ -21,5 +23,4 @@ CLASS zcl_parking_02 IMPLEMENTATION.
     rv_precio          = iv_horas_estacionado * '1.50'.
 
   ENDMETHOD.
-
 ENDCLASS.

@@ -19,19 +19,26 @@ CLASS zcl_atraccion_02 DEFINITION PUBLIC CREATE PUBLIC.
           mv_visitantes_hoy TYPE i.
 ENDCLASS.
 
-CLASS zcl_atraccion_02 IMPLEMENTATION.
+
+
+CLASS ZCL_ATRACCION_02 IMPLEMENTATION.
+
+
   METHOD constructor.
     mv_nombre         = iv_nombre.
     mv_visitantes_hoy = 0.
   ENDMETHOD.
 
+
   METHOD recibir_visitante.
     mv_visitantes_hoy = mv_visitantes_hoy + 1.
   ENDMETHOD.
 
+
   METHOD calcular_precio_entrada.
     rv_precio = 0.
   ENDMETHOD.
+
 
   METHOD consultar_visitantes.
     rv_visitantes = mv_visitantes_hoy.

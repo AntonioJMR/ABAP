@@ -22,7 +22,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_dvd_02 IMPLEMENTATION.
+CLASS ZCL_DVD_02 IMPLEMENTATION.
 
 
   METHOD constructor.
@@ -30,5 +30,4 @@ CLASS zcl_dvd_02 IMPLEMENTATION.
     super->constructor( ).
 
   ENDMETHOD.
-
 ENDCLASS.

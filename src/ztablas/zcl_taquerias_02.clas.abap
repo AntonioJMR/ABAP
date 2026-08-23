@@ -10,7 +10,11 @@ CLASS zcl_taquerias_02 DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-CLASS zcl_taquerias_02 IMPLEMENTATION.
+
+
+CLASS ZCL_TAQUERIAS_02 IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
     out->write('INICIO').
@@ -187,6 +191,3 @@ CLASS zcl_taquerias_02 IMPLEMENTATION.
 *
   ENDMETHOD.
 ENDCLASS.
-
-
-

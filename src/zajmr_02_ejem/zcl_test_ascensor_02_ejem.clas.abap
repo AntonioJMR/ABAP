@@ -12,7 +12,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_test_ascensor_02_ejem IMPLEMENTATION.
+CLASS ZCL_TEST_ASCENSOR_02_EJEM IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 

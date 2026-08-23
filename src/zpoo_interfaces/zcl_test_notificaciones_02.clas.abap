@@ -9,7 +9,9 @@ CLASS zcl_test_notificaciones_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_test_notificaciones_02 IMPLEMENTATION.
+
+CLASS ZCL_TEST_NOTIFICACIONES_02 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -70,5 +72,4 @@ out->write( |==============================2=========================| ).
     out->write( |Coste TOTAL de todos los envíos: { lv_coste_total } € | ).
 
   ENDMETHOD.
-
 ENDCLASS.

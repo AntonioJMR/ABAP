@@ -1,0 +1,67 @@
+managed implementation in class ZBP_R_EMBARAZO_02 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_EMBARAZO_02 alias ZrEmbarazo02
+persistent table ZEMBARAZO_02
+extensible
+draft table ZEMBARAZO_02_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   IdSeguimiento,
+   NombrePaciente;
+
+  field ( readonly )
+   CreatedBy,
+   LastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   IdSeguimiento,
+   NombrePaciente;
+
+
+  create;
+  update;
+  delete;
+
+// metodo añadido de test
+validation ValidarFechaUltimaRegla on save
+{
+    create;
+    update;
+    field FechaUltimaRegla;
+}
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZEMBARAZO_02 corresponding extensible
+  {
+    IdSeguimiento = ID_SEGUIMIENTO;
+    NombrePaciente = NOMBRE_PACIENTE;
+    FechaUltimaRegla = FECHA_ULTIMA_REGLA;
+    FechaProbableParto = FECHA_PROBABLE_PARTO;
+    SemanaGestacion = SEMANA_GESTACION;
+    GrupoSanguineo = GRUPO_SANGUINEO;
+    FactorRh = FACTOR_RH;
+    NivelRiesgo = NIVEL_RIESGO;
+    Estado = ESTADO;
+    PesoActual = PESO_ACTUAL;
+    UnidadPeso = UNIDAD_PESO;
+    ProximaRevision = PROXIMA_REVISION;
+    Observaciones = OBSERVACIONES;
+    CreatedBy = CREATED_BY;
+    LastChangedBy = LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}

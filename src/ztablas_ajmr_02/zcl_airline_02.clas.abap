@@ -12,7 +12,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_airline_02 IMPLEMENTATION.
+CLASS ZCL_AIRLINE_02 IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
 *   ==================================================================

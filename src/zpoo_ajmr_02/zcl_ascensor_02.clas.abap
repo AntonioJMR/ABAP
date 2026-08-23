@@ -69,7 +69,9 @@ CLASS zcl_ascensor_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
 ENDCLASS.
 
 
-CLASS zcl_ascensor_02 IMPLEMENTATION.
+
+CLASS ZCL_ASCENSOR_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     mv_planta_maxima = iv_planta_maxima.
@@ -78,6 +80,7 @@ CLASS zcl_ascensor_02 IMPLEMENTATION.
     mv_peso_actual   = 0.
     mv_bloqueado     = abap_false.
   ENDMETHOD.
+
 
   METHOD entrar_peso.
 
@@ -93,10 +96,12 @@ CLASS zcl_ascensor_02 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD vaciar.
     mv_peso_actual = 0.
     mv_bloqueado   = abap_false.
   ENDMETHOD.
+
 
   METHOD subir_a_planta.
 
@@ -115,10 +120,10 @@ CLASS zcl_ascensor_02 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD consultar_estado.
     ev_planta_actual = mv_planta_actual.
     ev_peso_actual   = mv_peso_actual.
     ev_bloqueado     = mv_bloqueado.
   ENDMETHOD.
-
 ENDCLASS.

@@ -7,7 +7,10 @@ CREATE PUBLIC.
     INTERFACES if_oo_adt_classrun.
 ENDCLASS.
 
-CLASS zcl_test_instrumentos_02 IMPLEMENTATION.
+
+
+CLASS ZCL_TEST_INSTRUMENTOS_02 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -49,5 +52,4 @@ CLASS zcl_test_instrumentos_02 IMPLEMENTATION.
     out->write( |Paso 9 - Horas de uso piano: { lo_piano->consultar_horas_uso( ) }| ).
 
   ENDMETHOD.
-
 ENDCLASS.

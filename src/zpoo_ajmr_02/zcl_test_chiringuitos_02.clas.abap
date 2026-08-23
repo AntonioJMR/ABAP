@@ -95,7 +95,9 @@ CLASS zcl_test_chiringuitos_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_test_chiringuitos_02 IMPLEMENTATION.
+
+CLASS ZCL_TEST_CHIRINGUITOS_02 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -136,5 +138,4 @@ CLASS zcl_test_chiringuitos_02 IMPLEMENTATION.
     out->write( |Comisión ayuntamiento hamacas (20%): { lv_comision } € | ).
 
   ENDMETHOD.
-
 ENDCLASS.

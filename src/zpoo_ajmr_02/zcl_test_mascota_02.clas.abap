@@ -3,7 +3,10 @@ CLASS zcl_test_mascota_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
     INTERFACES if_oo_adt_classrun.
 ENDCLASS.
 
-CLASS zcl_test_mascota_02 IMPLEMENTATION.
+
+
+CLASS ZCL_TEST_MASCOTA_02 IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -31,5 +34,4 @@ CLASS zcl_test_mascota_02 IMPLEMENTATION.
     out->write( |Tras comer: Hambre = { lv_hambre } - Energia = { lv_energia }| ).
 
   ENDMETHOD.
-
 ENDCLASS.

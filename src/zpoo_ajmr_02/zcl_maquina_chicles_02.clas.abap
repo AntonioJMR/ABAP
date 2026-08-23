@@ -59,12 +59,15 @@ CLASS zcl_maquina_chicles_02 DEFINITION PUBLIC FINAL CREATE PUBLIC.
 ENDCLASS.
 
 
-CLASS zcl_maquina_chicles_02 IMPLEMENTATION.
+
+CLASS ZCL_MAQUINA_CHICLES_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     mv_chicles_restantes = iv_chicles_iniciales.
     mv_precio_chicle     = 25.
   ENDMETHOD.
+
 
   METHOD vender_chicle.
 
@@ -77,8 +80,8 @@ CLASS zcl_maquina_chicles_02 IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD consultar_stock.
     resultado = mv_chicles_restantes.
   ENDMETHOD.
-
 ENDCLASS.

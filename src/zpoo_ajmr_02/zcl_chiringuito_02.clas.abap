@@ -29,12 +29,15 @@ CLASS zcl_chiringuito_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_chiringuito_02 IMPLEMENTATION.
+
+CLASS ZCL_CHIRINGUITO_02 IMPLEMENTATION.
+
 
   METHOD constructor.
     mv_nombre      = iv_nombre.
     mv_recaudacion = 0.
   ENDMETHOD.
+
 
   METHOD vender.
     IF iv_importe > 0.
@@ -45,12 +48,13 @@ CLASS zcl_chiringuito_02 IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+
   METHOD calcular_comision_ayuntamiento.
     rv_comision = mv_recaudacion * '0.10'.
   ENDMETHOD.
 
+
   METHOD consultar_recaudacion.
     rv_recaudacion = mv_recaudacion.
   ENDMETHOD.
-
 ENDCLASS.
