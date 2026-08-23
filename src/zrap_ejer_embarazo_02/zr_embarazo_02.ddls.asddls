@@ -3,7 +3,7 @@
 @ObjectModel.sapObjectNodeType.name: 'ZEMBARAZO_02'
 @EndUserText.label: '###GENERATED Core Data Service Entity'
 define root view entity ZR_EMBARAZO_02
-  as select from ZEMBARAZO_02
+  as select from zembarazo_02
 {
   key id_seguimiento as IdSeguimiento,
   nombre_paciente as NombrePaciente,
