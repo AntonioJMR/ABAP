@@ -1,0 +1,125 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'ID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'ID'
+annotate view ZC_JUEGO_02 with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @EndUserText.label: 'ID'
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'ID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'ID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  ID;
+  
+  @EndUserText.label: 'Jugador1'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Jugador1'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Jugador1'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Jugador1;
+  
+  @EndUserText.label: 'Jugador2'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Jugador2'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Jugador2'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Jugador2;
+  
+  @EndUserText.label: 'Resultado'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Resultado'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Resultado'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Resultado;
+  
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  LastChangedAt;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  LocalLastChangedAt;
+}
