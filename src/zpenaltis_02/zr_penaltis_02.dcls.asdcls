@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_PENALTIS_02'
+@MappingRole: true
+define role ZR_PENALTIS_02 {
+  grant select on ZR_PENALTIS_02
+  where TRUE;
+}
