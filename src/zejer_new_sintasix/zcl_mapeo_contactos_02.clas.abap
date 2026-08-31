@@ -35,7 +35,7 @@ CLASS zcl_mapeo_contactos_02 IMPLEMENTATION.
 
   METHOD if_oo_adt_classrun~main.
 
-    " Inicializa
+    " Inicializa valores
     DATA(lt_empleados) = VALUE tt_empleados(
         ( id = 1 nombre = 'Ana García'   email = 'ana@empresa.es'
 			telefono = '111111111' departamento = 'Desarrollo'     salario = 28000 )
@@ -45,6 +45,7 @@ CLASS zcl_mapeo_contactos_02 IMPLEMENTATION.
 			telefono = '333333333' departamento = 'Administración' salario = 26000 )
     ).
 
+    " asigna valores de lt_empleados a tt_contactos
     " AL LLAMARSE IGUAL: Solo necesitas pasar la tabla origen dentro de los paréntesis.
     " ABAP hace la inferencia y el emparejamiento automático por debajo.
     DATA(lt_contactos) = CORRESPONDING tt_contactos( lt_empleados ).
@@ -53,7 +54,7 @@ CLASS zcl_mapeo_contactos_02 IMPLEMENTATION.
     out->write( '--- TABLA DE EMPLEADOS (ORIGEN) ---' ).
     out->write( lt_empleados ).
 
-    out->write( '--- TABLA DE CONTACTOS (DESTINO AUTOMÁTICO) ---' ).
+    out->write( '--- TABLA DE CONTACTOS (DESTINO AUTOMÁTICO por Corresponding) ---' ).
     out->write( lt_contactos ).
 
   ENDMETHOD.
