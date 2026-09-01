@@ -7,9 +7,9 @@ CLASS zcl_medicamento_02 DEFINITION
 
     METHODS constructor
       IMPORTING
-        iv_nombre  TYPE string
-        iv_precio  TYPE zdecimals2
-        iv_stock   TYPE i.
+        lv_nombre  TYPE string
+        lv_precio  TYPE zdecimals2
+        lv_stock   TYPE i.
 
     METHODS obtener_nombre
       RETURNING VALUE(rv_nombre) TYPE string.
@@ -30,9 +30,9 @@ CLASS zcl_medicamento_02 IMPLEMENTATION.
 
   METHOD constructor.
 
-    nombre = iv_nombre.
-    precio = iv_precio.
-    stock  = iv_stock.
+    nombre = lv_nombre.
+    precio = lv_precio.
+    stock  = lv_stock.
 
   ENDMETHOD.
 
