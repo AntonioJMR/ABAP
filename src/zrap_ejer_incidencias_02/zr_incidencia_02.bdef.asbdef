@@ -15,6 +15,8 @@ authorization master( global )
    Titulo;
 
   field ( readonly )
+    FechaCierre,
+
    CreatedBy,
    CreatedAt,
    LastChangedBy,
