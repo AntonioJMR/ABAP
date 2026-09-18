@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zsegunda_clase_02 IMPLEMENTATION.
+CLASS ZSEGUNDA_CLASE_02 IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
