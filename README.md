@@ -1,6 +1,6 @@
-# ABAP
+# ABAP - Cloud
 
-# Aprendiendo ABAP (Advanced Business Application Programming)
+# Aprendiendo ABAP - Cloud (Advanced Business Application Programming)
 
 ¡Bienvenido/a a mi repositorio de aprendizaje de ABAP! Este espacio dedicado a mi aprendizaje en el lenguaje de programación de SAP. Aquí guardo ejercicios, proyectos prácticos, apuntes y snippets de código desde los conceptos más básicos hasta temas avanzados.
 
@@ -17,23 +17,38 @@
 ## Estructura del Proyecto
 
 El repositorio está organizado por módulos de aprendizaje para mantener el código limpio y localizable:
-<!--
+
 ```text
 ├── 01-fundamentos/          # Tipos de datos, variables, estructuras de control
-├── 02-estructuras-datos/    # Tablas internas, estructuras, áreas de trabajo
+├── 02-estructuras-datos/    # Diccionario de datos (DDIC), dominios, data elements, tablas internas y estructuras
 ├── 03-base-datos/           # Operaciones CRUD, Open SQL, joins y subqueries
-├── 04-modularizacion/       # Subrutinas (FORM), módulos de función, bapis
-├── 05-reportes/             # Reportes clásicos, interactivos y ALV (SAP List Viewer)
-├── 06-abap-oo/              # Clases, interfaces, herencia y polimorfismo
-└── 07-sintaxis-moderna/     # Expresiones condicionales, constructores (VALUE, REDUCE, FILTER)
+├── 04-reportes/             # Reportes clásicos, interactivos y ALV (SAP List Viewer)
+├── 05-abap-oo/              # Clases, interfaces, herencia y polimorfismo
+├── 06-sintaxis-moderna/     # Expresiones condicionales, constructores (VALUE, REDUCE, FILTER)
+├── 07-cds-views/            # Core Data Services, modelado de datos semántico y extensiones de vistas
+└── 08-rap-model/            # ABAP RESTful Application Programming Model, servicios OData y desarrollo Cloud
 ```
+<!--
+├── 08-rap-model/            # ABAP RESTful Application Programming Model, servicios OData y desarrollo Cloud
+└── 09-modularizacion/       # Subrutinas (FORM), módulos de función, bapis
+-->
 
 ---
--->
+
+
+---
+
+### 📚 Conceptos Teóricos y Tecnologías (DDIC, CDS y RAP)
+Se incluye información teórica y notas sobre componentes clave adquiridos durante la formación:
+* **Dominios y Elementos de Datos (Data Elements):** Definición técnica y semántica en el Diccionario de Datos (DDIC).
+* **CDS Views (Core Data Services) y RAP (ABAP RESTful Application Programming Model):** Introducción al modelado de datos avanzado y desarrollo para la nube de SAP.
+
+---
+
 ##  Entorno de Desarrollo y Herramientas
 Para escribir y probar el código de este repositorio utilizo:
-*   **Eclipse (ADT):** [Indica cuál usas, por ejemplo: *ABAP Development Tools en Eclipse*]
-*   **Sistema SAP:** [Indica tu entorno, por ejemplo: *SAP AS ABAP 7.52 SP04 Developer Edition / SAP BTP ABAP Environment*]
+*   **Eclipse (ADT):** [*ABAP Development Tools en Eclipse*]
+*   **Sistema SAP:** [*SAP AS ABAP 7.52 SP04 Developer Edition / SAP BTP ABAP Environment*]
 *   **Control de Versiones:** **abapGit** (para exportar el código del sistema SAP a texto plano).
 
 ---
