@@ -11,7 +11,8 @@ CLASS zprimera_clase_02 DEFINITION
 ENDCLASS.
 
 
-CLASS zprimera_clase_02 IMPLEMENTATION.
+
+CLASS ZPRIMERA_CLASE_02 IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

@@ -8,9 +8,9 @@
 //
 //Crea un CDS view entity llamado zcds_conexiones_avanzado que:
 //
-//- Parta de /DMO/CONNECTION (conexiones de vuelo, ruta entre aeropuertos) y use una association (no JOIN) 
+//- Parta de /DMO/CONNECTION (conexiones de vuelo, ruta entre aeropuertos) y use una association (no JOIN)
 //hacia /DMO/CARRIER para acceder al nombre de la aerolínea.
-//- Reciba un parámetro p_distancia (tipo abap.dec(9,2)... o abap.int4 si preferís simplificar) para filtrar 
+//- Reciba un parámetro p_distancia (tipo abap.dec(9,2)... o abap.int4 si preferís simplificar) para filtrar
 //  solo conexiones con distancia superior a la indicada.
 //- Calcule, agrupado por aeropuerto de origen (airport_from_id):
 //  - Distancia media de las conexiones (avg).
@@ -23,8 +23,8 @@
 //
 //---
 //
-//*Progresión pedagógica igual que antes:* de simple 
-//selección → join + parámetro + agregación → association + CASE + parámetro + semántica de moneda/distancia. 
+//*Progresión pedagógica igual que antes:* de simple
+//selección → join + parámetro + agregación → association + CASE + parámetro + semántica de moneda/distancia.
 //Así refuerzan el mismo patrón con tablas y contexto distintos (clientes/agencias/conexiones en vez de vuelos/reservas).
 
 
@@ -32,28 +32,29 @@ define view entity zcds_conexiones_avanzado_02
   with parameters
     p_distancia : abap.int4
 
-  as select from /dmo/connection as c
-    inner join   /dmo/carrier    as ca on c.carrier_id = ca.carrier_id
+  as select from /dmo/connection as co
+    inner join   /dmo/carrier    as ca on co.carrier_id = ca.carrier_id
 
 {
-  key c.airport_from_id                     as aeropuerto_origen,
+  key co.airport_from_id                     as aeropuerto_origen,
 
-      ca.name                               as nombre_aerolinea,
+      ca.name                                as nombre_aerolinea,
 
-      count(*)                              as num_conexiones,
+      count(*)                               as num_conexiones,
 
-      avg( c.distance as abap.dec( 15,3 ) ) as distancia_media,
+      avg( co.distance as abap.dec( 10,0 ) ) as distancia_media_avg,
 
       case
-        when avg( c.distance as abap.dec( 15,3 ) ) < 1000                       then 'Corta'
-        when avg( c.distance as abap.dec( 15,3 ) ) between 1000 and 5000        then 'Media'
+        when avg( co.distance as abap.dec( 10,0 ) ) < 1000                       then 'Corta'
+        when avg( co.distance as abap.dec( 10,0 ) ) between 1000 and 5000        then 'Media'
+    //  when avg( co.distance as abap.dec( 10,0 ) ) <= 5000                      then 'Media'
         else 'Larga'
-      end                                   as tipo_ruta
+      end                                    as tipo_ruta
 
 }
 where
-  c.distance > $parameters.p_distancia
+  co.distance > $parameters.p_distancia
 
 group by
-  c.airport_from_id,
+  co.airport_from_id,
   ca.name

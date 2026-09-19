@@ -31,10 +31,10 @@ define view entity zcds_agencias_medio_02
       count(*)                                      as num_reservas,
 
       @Semantics.amount.currencyCode: 'moneda'
-      avg(  b.flight_price  as abap.curr( 16,2 )  ) as importe_medio,
+      avg(  b.flight_price  as abap.curr( 16,2 )  ) as importe_medio_AVG,
 
       @Semantics.amount.currencyCode: 'moneda'
-      sum( b.flight_price)                          as importe_total,
+      sum( b.flight_price)                          as importe_total_SUM,
 
       b.currency_code                               as moneda
 

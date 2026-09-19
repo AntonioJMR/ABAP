@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_ejer_repaso_crud_02 IMPLEMENTATION.
+CLASS ZCL_EJER_REPASO_CRUD_02 IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
