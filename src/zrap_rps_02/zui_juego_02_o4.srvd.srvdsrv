@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_JUEGO_02'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_JUEGO_02'
+  }
+}
+define service ZUI_JUEGO_02_O4 provider contracts odata_v4_ui {
+  expose ZC_JUEGO_02;
+}

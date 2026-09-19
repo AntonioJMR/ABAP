@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMSG_JARDINERIA_02</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>ajmr 02</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMSG_JARDINERIA_02</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>No hay stock suficiente para la venta solicitada</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMSG_JARDINERIA_02</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Nivel de riego por debajo del mínimo, planta no disponible</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMSG_JARDINERIA_02</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Venta realizada correctamente</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMSG_JARDINERIA_02</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Riego realizado correctamente</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

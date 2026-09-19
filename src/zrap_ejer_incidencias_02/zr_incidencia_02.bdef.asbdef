@@ -1,9 +1,7 @@
 managed implementation in class ZBP_R_INCIDENCIA_02 unique;
 strict ( 2 );
-
 with draft;
 extensible;
-
 define behavior for ZR_INCIDENCIA_02 alias ZrIncidencia02
 persistent table ZINCIDENCIA_02
 extensible
@@ -13,12 +11,12 @@ lock master total etag LastChangedAt
 authorization master( global )
 {
   field ( mandatory : create )
-   Titulo,
-   IdIncidencia;
+   IdIncidencia,
+   Titulo;
 
   field ( readonly )
+    FechaCierre,
 
-   FechaCierre,
    CreatedBy,
    CreatedAt,
    LastChangedBy,
@@ -28,10 +26,11 @@ authorization master( global )
   field ( readonly : update )
    IdIncidencia;
 
+  determination InicializarIncidencia on modify { create; }
+  action CerrarIncidencia result [1] $self;
 
   create;
-//  update;
-  update ( features : instance );
+  update;
   delete;
 
   draft action Activate optimized;
@@ -39,13 +38,6 @@ authorization master( global )
   draft action Edit;
   draft action Resume;
   draft determine action Prepare;
-
-
-
-  determination InicializarIncidencia on modify { create; }
-
-//  action CerrarIncidencia;
-
 
   mapping for ZINCIDENCIA_02 corresponding extensible
   {

@@ -68,17 +68,6 @@ annotate view ZC_INCIDENCIA_02 with
   } ]
   Categoria;
   
-  
-      @Consumption.valueHelpDefinition: [
-      {
-        entity: {
-          name: 'ZI_PRIORIDAD_02',
-          element: 'PriorityLevel'
-        },
-        useForValidation: true
-      }
-    ]
-  @EndUserText.label: 'Prioridad'
   @UI.identification: [ {
     position: 50 
   } ]
@@ -90,17 +79,6 @@ annotate view ZC_INCIDENCIA_02 with
   } ]
   Prioridad;
   
-  
-      @Consumption.valueHelpDefinition: [
-      {
-        entity: {
-          name: 'ZI_ESTADOVH_02',
-          element: 'StatusValue'
-        },
-        useForValidation: true
-      }
-    ]
-  @EndUserText.label: 'Estado'
   @UI.identification: [ {
     position: 60 
   } ]

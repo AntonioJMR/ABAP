@@ -1,0 +1,50 @@
+managed implementation in class ZBP_R_JUEGO_02 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_JUEGO_02 alias ZrJuego02
+persistent table ZJUEGO_02
+extensible
+draft table ZJUEGO_02_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   ID;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   ID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZJUEGO_02 corresponding extensible
+  {
+    ID = ID;
+    Jugador1 = JUGADOR1;
+    Jugador2 = JUGADOR2;
+    Resultado = RESULTADO;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}
