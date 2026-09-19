@@ -1,0 +1,52 @@
+managed implementation in class ZBP_R_PENALTIS_02 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_PENALTIS_02 alias ZrPenaltis02
+persistent table ZPENALTIS_02
+extensible
+draft table ZPENALTIS_02_D
+etag master Localinstancelastchangedat
+lock master total etag Lastchangedat
+authorization master( global )
+{
+  field ( mandatory : create )
+   NumLanzamiento;
+
+  field ( readonly )
+   Createdby,
+   Createdat,
+   Localinstancelastchangedby,
+   Localinstancelastchangedat,
+   Lastchangedat;
+
+  field ( readonly : update )
+   NumLanzamiento;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZPENALTIS_02 corresponding extensible
+  {
+    NumLanzamiento = NUM_LANZAMIENTO;
+    Lanzador = LANZADOR;
+    DireccionDisparo = DIRECCION_DISPARO;
+    Portero = PORTERO;
+    DireccionPortero = DIRECCION_PORTERO;
+    Resultado = RESULTADO;
+    Createdby = CREATEDBY;
+    Createdat = CREATEDAT;
+    Localinstancelastchangedby = LOCALINSTANCELASTCHANGEDBY;
+    Localinstancelastchangedat = LOCALINSTANCELASTCHANGEDAT;
+    Lastchangedat = LASTCHANGEDAT;
+  }
+
+}
