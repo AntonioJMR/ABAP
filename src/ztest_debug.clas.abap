@@ -11,8 +11,7 @@ CLASS ztest_debug DEFINITION
 ENDCLASS.
 
 
-
-CLASS ZTEST_DEBUG IMPLEMENTATION.
+CLASS ztest_debug IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.

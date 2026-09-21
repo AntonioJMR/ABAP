@@ -3,11 +3,12 @@
 {
 "FROM":
 [
-"/DMO/BOOKING",
-"/DMO/CUSTOMER"
+"/DMO/BOOKING"
 ],
 "ASSOCIATED":
-[],
+[
+"/DMO/CUSTOMER"
+],
 "BASE":
 [],
 "ANNO_REF":
